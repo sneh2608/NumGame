@@ -43,7 +43,7 @@ const NumberTile = ({ handleClick, number }) => {
     return (
         <Animated.View style={[styles.cardContainer, rotateYAnimatedStyle, {backgroundColor: color}]} >
         <Pressable onPress={()=>handleItemClick(number)} style={styles.card}>
-            <Text>{number}</Text>
+            <Text style={styles.numberStyle}>{number}</Text>
         </Pressable>
         </Animated.View>
       );
@@ -59,6 +59,9 @@ const styles=StyleSheet.create({
         flex:1,
         alignItems:'center',
         justifyContent:'center'
+    },
+    numberStyle:{
+        color:'white', fontSize:18, fontWeight:700
     }
 })
 
